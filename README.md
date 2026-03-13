@@ -33,7 +33,7 @@ Organize your visualization space programmatically or through the UI to create d
   <img width="49.5%" src="https://user-images.githubusercontent.com/19650074/198748189-917091b6-95c4-4415-b965-ba3e7e81e1f8.png"/>
 </p>
 
-## Concepts
+## 1. Concepts
 Visdom has a simple set of features that can be composed for various use-cases.
 
 <details>
@@ -166,7 +166,7 @@ Using the view dropdown it is possible to select previously saved views, restori
 
 
 
-## Setup
+## 2.Setup
 Python and web clients come bundled with the python server.
 
 Install from pip
@@ -179,7 +179,7 @@ Install from source
 > pip install git+https://github.com/fossasia/visdom
 ```
 
-## Usage
+## 3.Usage
 
 Start the server (probably in a  `screen` or `tmux`) from the command line:
 
@@ -238,7 +238,7 @@ python example/demo.py
 ```
 
 
-## API
+## 4.API
 For a quick introduction into the capabilities of `visdom`, have a look at the `example` directory, or read the details below.
 
 ### Visdom Arguments (Python only)
@@ -261,15 +261,15 @@ Other options are either currently unused (endpoint, ipv6) or used for internal 
 
 ### Basics
 Visdom offers the following basic visualization functions:
-- [`vis.image`](#visimage)    : image
-- [`vis.images`](#visimages)   : list of images
-- [`vis.text`](#vistext)     : arbitrary HTML
-- [`vis.properties`](#visproperties)     : properties grid
-- [`vis.audio`](#visaudio)    : audio
-- [`vis.video`](#visvideo)    : videos
-- [`vis.svg`](#vissvg)      : SVG object
-- [`vis.matplot`](#vismatplot)  : matplotlib plot
-- [`vis.save`](#vissave)     : serialize state server-side
+1- [`vis.image`](#visimage)    : image
+2- [`vis.images`](#visimages)   : list of images
+3- [`vis.text`](#vistext)     : arbitrary HTML
+4- [`vis.properties`](#visproperties)     : properties grid
+5- [`vis.audio`](#visaudio)    : audio
+6- [`vis.video`](#visvideo)    : videos
+7- [`vis.svg`](#vissvg)      : SVG object
+8- [`vis.matplot`](#vismatplot)  : matplotlib plot
+9- [`vis.save`](#vissave)     : serialize state server-side
 
 ### Plotting
 We have wrapped several common plot types to make creating basic visualizations easily. These visualizations are powered by [Plotly](https://plot.ly/).
@@ -313,7 +313,7 @@ vis._send({'data': [trace], 'layout': layout, 'win': 'mywin'})
 - [`vis.replay_log`](#visreplay_log): replay the actions from the provided log file
 
 
-## Details
+## 5.Details
 <img src="https://user-images.githubusercontent.com/19650074/198747904-7a8a580f-851a-45fb-8f45-94e54a910ee2.png"/>
 
 ### Basics
@@ -780,7 +780,7 @@ This function takes the contents of a visdom log and replays them to the current
 Arguments:
 - `log_filename`: log file to replay the contents of.
 
-## Customizing Visdom
+## 6.Customizing Visdom
 The user config directory for visdom is
 - `~/.config/visdom` for Linux
 - `~/Library/Preferences/visdom` for OSX
@@ -789,14 +789,14 @@ The user config directory for visdom is
 By placing a `style.css` in you user config directory, visdom will serve the customized css file along with the default style-file.
 In addition, it is also possible to create a project-specific file; just place the file `style.css` in your `env_path`.
 
-## License
+## 7.License
 visdom is Apache 2.0 licensed, as found in the LICENSE file.
 
-## Note on Lua Torch Support
+## 8.Note on Lua Torch Support
 Support for Lua Torch was deprecated following `v0.1.8.4`. If you'd like to use torch support, you'll need to download that release. You can follow the usage instructions there, but it is no longer officially supported.
 
-## Contributing
+## 9.Contributing
 See guidelines for contributing [here.](./CONTRIBUTING.md)
 
-## Acknowledgments
+## 10.Acknowledgments
 Visdom was inspired by tools like [display](https://github.com/szym/display) and relies on [Plotly](https://plot.ly/) as a plotting front-end.
