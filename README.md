@@ -786,7 +786,7 @@ The user config directory for visdom is
 - `~/Library/Preferences/visdom` for OSX
 - `%APPDATA%/visdom` for Windows
 
-By placing a `style.css` in you user config directory, visdom will serve the customized css file along with the default style-file.
+By placing a `style.css` in your user config directory, visdom will serve the customized css file along with the default style-file.
 In addition, it is also possible to create a project-specific file; just place the file `style.css` in your `env_path`.
 
 ## 7. License
